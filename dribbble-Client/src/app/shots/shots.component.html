@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<h2>Shots</h2>
+
+<div class="container">
+    <div *ngFor="let shot of shots" class="shotImage" ng-click="toggleModal()">
+        <img src="{{shot.images.teaser}}">
+        <ul>
+            <li>
+                <a class="fa fa-heart"></a>
+                <a>{{shot.likes_count}}</a>
+            </li>
+            <li>
+                <a class="fa fa-eye"></a>
+                <a>{{shot.views_count}}</a>
+            </li>
+            <li>
+                <a>Buckets:</a>
+                <a>{{shot.buckets_count}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
